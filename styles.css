@@ -1,7 +1,7 @@
 /* Add custom CSS styles here */
 #layerSwitcher {
     position: absolute;
-    top: 10px;
+    top: 100px;
     right: 10px;
     background-color: white;
     padding: 10px;
@@ -12,4 +12,17 @@
   #layerSwitcher label {
     display: block;
   }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#map {
+  height: calc(100% - 5px); /* Subtract the navbar height */
+}
+
+
+
   

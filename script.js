@@ -6,6 +6,7 @@ var baseLayer = new ol.layer.Tile({
   
   var lithuaniaRailLayer = new ol.layer.Tile({
     title: 'Lithuania Rail',
+    visible: false,
     source: new ol.source.TileWMS({
       url: 'http://localhost:8080/geoserver/Lithuania/wms',
       params: {
@@ -19,6 +20,7 @@ var baseLayer = new ol.layer.Tile({
   
   var lithuaniaDEMLayer = new ol.layer.Tile({
     title: 'Lithuania DEM',
+    visible: false,
     source: new ol.source.TileWMS({
       url: 'http://localhost:8080/geoserver/testing/wms',
       params: {
@@ -32,6 +34,7 @@ var baseLayer = new ol.layer.Tile({
 
   var gisOsmBuildingsLayer = new ol.layer.Tile({
     title: 'GIS OSM Buildings',
+    visible: false,
     source: new ol.source.TileWMS({
       url: 'http://localhost:8080/geoserver/Lithuania/wms',
       params: {
