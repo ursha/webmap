@@ -78,8 +78,18 @@ document.getElementById('lithuaniaRailCheckbox').addEventListener('change', func
     gisOsmBuildingsLayer.setVisible(event.target.checked);
   });
   
-  
+ 
 
+// Remove the mouseenter and mouseleave event listeners
+
+// Add an event listener for the toggle button
+document.getElementById('sidebar-toggle-button').addEventListener('click', function () {
+    var sidebarWrapper = document.getElementById('sidebar-wrapper');
+    sidebarWrapper.classList.toggle('collapsed');
+    sidebarWrapper.classList.toggle('pinned');
+  });
   
-  
+  // Initialize the sidebar as collapsed and not pinned
+  document.getElementById('sidebar-wrapper').classList.add('collapsed');
+  document.getElementById('sidebar-wrapper').classList.remove('pinned');
   

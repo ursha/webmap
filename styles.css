@@ -11,10 +11,26 @@ body, html {
   #wrapper {
     height: 100%;
   }
+  #sidebar-wrapper {
+    width: 250px;
+    transition: width 0.1s;
+  }
+  
+  #sidebar-wrapper.collapsed {
+    width: 0 !important;
+    overflow: hidden;
+    transition: width 0.1s;
+  }
   
   #sidebar-wrapper {
     min-height: 100%;
     width: 300px;
+  }
+  #sidebar-toggle-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000;
   }
   
   #page-content-wrapper {
