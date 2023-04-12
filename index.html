@@ -20,7 +20,7 @@
     
     <div class="d-flex" id="wrapper">
       <div class="bg-dark border-right" id="sidebar-wrapper">
-        <button id="sidebar-toggle-button" class="btn btn-dark">Show Layers</button>
+        <button id="sidebar-toggle-button" class="btn btn-dark">Layers</button>
         <div class="sidebar-heading text-white">Layers</div>
         <div class="list-group list-group-flush">
           <label class="list-group-item list-group-item-action bg-dark text-white">
@@ -42,6 +42,27 @@
         <div id="map" class="map"></div>
       </div>
     </div>
+    
+    <!-- Add a legend with basemap options -->
+    <div id="basemap-legend" class="bg-dark p-2 rounded">
+      <div class="form-group text-white">
+        <label for="basemap-selector">Basemap</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="basemap-option" id="osm-option" value="osm" checked>
+          <label class="form-check-label text-white" for="osm-option">
+            Open Street Map
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="basemap-option" id="satellite-option" value="satellite">
+          <label class="form-check-label text-white" for="satellite-option">
+            Satellite Imagery
+          </label>
+        </div>
+      </div>
+    </div>
+
+
 
     <script src="script.js"></script>
   </body>

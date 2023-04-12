@@ -46,15 +46,28 @@ var baseLayer = new ol.layer.Tile({
     })
   });
 
+// Add a new Satellite imagery basemap
+var satelliteLayer = new ol.layer.Tile({
+    type: 'base',
+    title: 'Satellite',
+    visible: false,
+    source: new ol.source.XYZ({
+      url: 'https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}',
+      maxZoom: 20,
+    }),
+  });
+  
 
 //add basemap
   var map = new ol.Map({
     target: 'map',
     layers: [
       baseLayer,
+      satelliteLayer,
       lithuaniaDEMLayer,
       lithuaniaRailLayer,
-      gisOsmBuildingsLayer
+      gisOsmBuildingsLayer,
+      
     ],
     view: new ol.View({
       center: ol.proj.fromLonLat([25.2797, 54.6894]), // Center of the bounding box in Vilnius (longitude, latitude)
@@ -92,4 +105,20 @@ document.getElementById('sidebar-toggle-button').addEventListener('click', funct
   // Initialize the sidebar as collapsed and not pinned
   document.getElementById('sidebar-wrapper').classList.add('collapsed');
   document.getElementById('sidebar-wrapper').classList.remove('pinned');
+  
+
+
+// Add event listeners for basemap radio buttons
+document.querySelectorAll('input[name="basemap-option"]').forEach(function (element) {
+    element.addEventListener('change', function (event) {
+      var selectedValue = event.target.value;
+      if (selectedValue === 'osm') {
+        baseLayer.setVisible(true);
+        satelliteLayer.setVisible(false);
+      } else if (selectedValue === 'satellite') {
+        baseLayer.setVisible(false);
+        satelliteLayer.setVisible(true);
+      }
+    });
+  });
   
