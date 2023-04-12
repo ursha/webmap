@@ -47,7 +47,7 @@ var baseLayer = new ol.layer.Tile({
   });
 
 
-
+//add basemap
   var map = new ol.Map({
     target: 'map',
     layers: [
@@ -77,6 +77,9 @@ document.getElementById('lithuaniaRailCheckbox').addEventListener('change', func
   document.getElementById('lithuaniaBuildingsCheckbox').addEventListener('change', function (event) {
     gisOsmBuildingsLayer.setVisible(event.target.checked);
   });
+  
+  
+
   
   
   

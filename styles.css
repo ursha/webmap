@@ -1,28 +1,24 @@
-/* Add custom CSS styles here */
-#layerSwitcher {
-    position: absolute;
-    top: 100px;
-    right: 10px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    z-index: 1000;
+body, html {
+    height: 100%;
+    margin: 0;
   }
   
-  #layerSwitcher label {
-    display: block;
+  .map {
+    height: 100%;
+    width: 100%;
   }
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
-#map {
-  height: calc(100% - 5px); /* Subtract the navbar height */
-}
-
-
-
+  
+  #wrapper {
+    height: 100%;
+  }
+  
+  #sidebar-wrapper {
+    min-height: 100%;
+    width: 300px;
+  }
+  
+  #page-content-wrapper {
+    min-height: 100%;
+    width: 100%;
+  }
   
